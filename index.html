@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://localhost/Earning%20Site%20Freelancer/homepage.php# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daikin Aircon Specs Viewer</title>
+  <link href="./index_files/css2" rel="stylesheet">
+  <script src="./index_files/a076d05399.js.download" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #eef2f7; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+    .logo { margin-bottom: 10px; }
+    .logo img { height: 60px; }
+    h1 { color: #1e3a8a; font-size: 1.5rem; text-align: center; margin-bottom: 20px; }
+    select { padding: 12px; font-size: 1rem; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 20px; width: 100%; max-width: 300px; }
+    .card { background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); width: 100%; max-width: 700px; display: none; }
+    .card h2 { color: #2563eb; margin-bottom: 15px; font-size: 1.2rem; text-align: center; }
+    .card img { width: 100%; max-height: 220px; object-fit: contain; border-radius: 10px; margin-bottom: 20px; }
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; }
+    li i { color: #10b981; margin-right: 8px; }
+    .compare-table { width: 100%; max-width: 1000px; margin-top: 40px; border-collapse: collapse; font-size: 0.9rem; }
+    .compare-table th, .compare-table td { border: 1px solid #ccc; padding: 10px; text-align: left; background: #fff; }
+    .compare-table th { background-color: #2563eb; color: #fff; }
+    @media (min-width: 768px) {
+      h1 { font-size: 2rem; }
+      select { font-size: 1.1rem; }
+      .card h2 { font-size: 1.4rem; }
+      li { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="./index_files/PTA_logo.png" alt="Daikin Logo">
+  </div>
+  <h1>🔍 Daikin Aircon Specs Viewer</h1>
+  <select id="modelSelect" onchange="showSpecs()">
+    <option value="">-- Piliin ang Model --</option>
+    <option value="prince">Prince</option>
+    <option value="queen">Queen</option>
+    <option value="king">King</option>
+  </select>
+  <div id="specsContainer" class="card" style="display: none;">
+          <h2>Daikin D‑Smart Prince (FTKF‑CVA)</h2>
+          <img src="./index_files/prince.png" alt="Daikin D‑Smart Prince (FTKF‑CVA)">
+          <ul><li><i class="fas fa-check-circle"></i>Capacity options: 0.8 / 1.0 / 1.5 / 2.0 / 2.5 / 3.0 HP</li><li><i class="fas fa-check-circle"></i>Refrigerant: R‑32</li><li><i class="fas fa-check-circle"></i>Compressor: Inverter</li><li><i class="fas fa-check-circle"></i>Econo Mode – energy-saving</li><li><i class="fas fa-check-circle"></i>Gin‑Ion Filter – captures/releases 99.9% of viruses &amp; bacteria</li><li><i class="fas fa-check-circle"></i>Super PCB – handles 0–440 V voltage fluctuations</li><li><i class="fas fa-check-circle"></i>Cooling capacity: up to 12,300 Btu/h (1.5 HP)</li><li><i class="fas fa-check-circle"></i>Noise level (indoor): 39 / 33 / 26 / 21 dBA</li><li><i class="fas fa-check-circle"></i>Warranty: 1 yr parts/labor; PCB 3 yr; compressor 5 yr</li><li><i class="fas fa-check-circle"></i>Inverter adjusts motor speed to maintain temp &amp; save power</li><li><i class="fas fa-check-circle"></i>Voltage protection – auto-shutoff on unstable power</li></ul>
+        </div>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Prince</th>
+        <th>Queen</th>
+        <th>King</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>HP Range</td><td>0.8–3.0</td><td>1.0–3.0</td><td>1.0–3.0</td></tr>
+      <tr><td>Refrigerant</td><td>R-32</td><td>R-32</td><td>R-32</td></tr>
+      <tr><td>Compressor</td><td>Inverter</td><td>Inverter</td><td>Inverter</td></tr>
+      <tr><td>Virus/Bacteria Filter</td><td>Gin-Ion Filter</td><td>Gin-Ion Blue Filter</td><td>Streamer Technology</td></tr>
+      <tr><td>Airflow Control</td><td>Standard</td><td>3D Airflow, Breeze Mode</td><td>Coanda Panel, Intelligent Eye</td></tr>
+      <tr><td>Humidity Control</td><td>No</td><td>No</td><td>Yes (Hybrid Cooling)</td></tr>
+      <tr><td>Wi-Fi Control</td><td>No</td><td>No</td><td>Yes (via Mobile App)</td></tr>
+      <tr><td>Voltage Guard</td><td>0–440 V</td><td>0–440 V</td><td>0–440 V</td></tr>
+      <tr><td>Mold Prevention</td><td>No</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Warranty</td><td>1yr parts/labor, 3yr PCB, 5yr compressor</td><td>1yr parts/labor, 3yr PCB, 5yr compressor</td><td>1yr parts/labor, 3yr PCB, 5yr compressor</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    const specsData = {
+      prince: {
+        name: "Daikin D‑Smart Prince (FTKF‑CVA)",
+        image: "prince.png",
+        specs: [
+          "Capacity options: 0.8 / 1.0 / 1.5 / 2.0 / 2.5 / 3.0 HP",
+          "Refrigerant: R‑32",
+          "Compressor: Inverter",
+          "Econo Mode – energy-saving",
+          "Gin‑Ion Filter – captures/releases 99.9% of viruses & bacteria",
+          "Super PCB – handles 0–440 V voltage fluctuations",
+          "Cooling capacity: up to 12,300 Btu/h (1.5 HP)",
+          "Noise level (indoor): 39 / 33 / 26 / 21 dBA",
+          "Warranty: 1 yr parts/labor; PCB 3 yr; compressor 5 yr",
+          "Inverter adjusts motor speed to maintain temp & save power",
+          "Voltage protection – auto-shutoff on unstable power"
+        ]
+      },
+      queen: {
+        name: "Daikin D‑Smart Queen (FTKC‑AVA)",
+        image: "D-Smart-Queen-FTKC-AVA-with-CSPF-Label.png",
+        specs: [
+          "Capacity: 1.0 / 1.5 / 2.0 / 2.5 / 3.0 HP",
+          "Refrigerant: R‑32",
+          "Compressor: Inverter",
+          "Gin‑Ion Blue Filter – traps/decomposes 99.9% viruses & bacteria",
+          "Breeze Mode – simulates natural breeze for comfort",
+          "3D Airflow – vertical + horizontal auto-swing",
+          "Voltage Guard PCB – supports 0–440 V",
+          "Comfort Airflow – prevents direct draft on people",
+          "Warranty: 1 yr parts/labor; PCB 3 yr; compressor 5 yr"
+        ]
+      },
+      king: {
+        name: "Daikin D‑Smart King (FTKZ‑WVM)",
+        image: "king.png",
+        specs: [
+          "Capacity: 1.0 / 1.5 / 2.0 / 2.5 / 3.0 HP",
+          "Refrigerant: R‑32",
+          "Compressor: Inverter",
+          "Hybrid Cooling – humidity + cooling combo",
+          "Streamer Technology – air purification",
+          "Coanda Effect – directs airflow along ceiling for comfort",
+          "Mold‑Proof Operation – dries interior to prevent mold",
+          "Wi‑Fi Connectivity via Daikin Mobile Controller",
+          "Intelligent Eye – auto-saving when no people detected",
+          "Two‑Area Intelligent Eye – adjusts airflow direction",
+          "Weekly Timer – 4 programmable on/off patterns",
+          "Voltage Guard PCB – withstands 0–440 V",
+          "Warranty: 1 yr parts/labor; PCB 3 yr; compressor 5 yr"
+        ]
+      }
+    };
+
+    function showSpecs() {
+      const m = document.getElementById("modelSelect").value;
+      const c = document.getElementById("specsContainer");
+      if (specsData[m]) {
+        const d = specsData[m];
+        c.innerHTML = `
+          <h2>${d.name}</h2>
+          <img src="${d.image}" alt="${d.name}">
+          <ul>${d.specs.map(s => `<li><i class="fas fa-check-circle"></i>${s}</li>`).join('')}</ul>
+        `;
+        c.style.display = "block";
+      } else {
+        c.style.display = "none";
+      }
+    }
+  </script>
+
+
+</body></html>
